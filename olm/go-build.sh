@@ -13,6 +13,6 @@ ldflags="
         -X github.com/prometheus/common/version.BuildUser=${USER}@${HOST}
         -X github.com/prometheus/common/version.BuildDate=${BUILD_DATE}"
 
-go build -trimpath=false -v -o bin/prometheus-adpapter \
+go build -trimpath=false -v -o bin/prometheus-adapter \
     -ldflags "${ldflags}" \
     "${GOPATH_SRC}"/cmd/adapter/adapter.go
