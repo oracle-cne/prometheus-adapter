@@ -2,7 +2,7 @@
 
 name="prometheus-adapter"
 version="0.12.0"
-registry=""container-registry.oracle.com/olcne"
+registry="container-registry.oracle.com/olcne"
 docker_tag=${registry}/${name}:v${version}
 
 podman build --pull \
