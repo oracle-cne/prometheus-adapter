@@ -12,7 +12,9 @@ ENV GOPATH_SRC=$GOPATH/src/github.com/oracle-cne/prometheus-adapter
 WORKDIR /workspace/go/src/github.com/oracle-cne/prometheus-adapter
 
 RUN git config --global --add safe.directory $(pwd) && \
-    sh olm/go-build.sh
+    sh olm/go-build.sh && \
+    ls -ltrh && \
+    ls -ltrh bin
 
 FROM container-registry.oracle.com/os/oraclelinux:9-slim
 
